@@ -1,0 +1,86 @@
+
+Total Points: 889.18
+-------------------------------
+
+Budget Spent: 226
+-------------------------------
+
+Starting Players
+-----------------
+
+Full Back
+E. Daly: 65.57
+
+Wings
+A. Watson: 72.55
+J. May: 74.37
+
+Centres
+G. Ringrose: 29.15
+N. Tompkins: 42.84
+
+Fly Half
+P. Garbisi: 21.21
+
+Scrum_Half
+B. Youngs: 37.57
+
+Back Rows
+C. Stander: 36.93
+G. Alldritt: 48.65
+J. Tipuric: 52.32
+
+Second Rows
+A. Jones: 42.37
+P. Willemse: 41.51
+
+Hooker
+J. Marchand: 31.21
+
+Props
+C. Baille: 32.72
+C. Healy: 20.24
+-------------------------------
+
+Captain:
+J. May: 74.37
+-------------------------------
+
+Super-Sub:
+J. Botham: 22.4
+-------------------------------
+
+Normal Subs
+J. Botham: 22.4
+-------------------------------
+
+Players by Country
+-----------------
+
+English Players
+A. Watson: 13.3
+B. Youngs: 13.7
+E. Daly: 15.2
+J. May: 14.1
+
+French Players
+C. Baille: 13.3
+G. Alldritt: 16.6
+J. Marchand: 12
+P. Willemse: 15.1
+
+Irish Players
+C. Healy: 12.6
+C. Stander: 15.9
+G. Ringrose: 15.9
+
+Italian Players
+P. Garbisi: 11.8
+
+Scottish Players
+
+Welsh Players
+A. Jones: 13.8
+J. Botham: 10.8
+J. Tipuric: 16.3
+N. Tompkins: 15.6

@@ -1,0 +1,86 @@
+
+Total Points: 1027.435
+-------------------------------
+
+Budget Spent: 220
+-------------------------------
+
+Starting Players
+-----------------
+
+Full Back
+B. Dulin: 81.68
+
+Wings
+G. Villiere: 85.36
+T. Thomas: 98.26
+
+Centres
+C. Redpath: 28.26
+R. Henshaw: 29.58
+
+Fly Half
+J. Sexton: 31.3
+
+Scrum_Half
+A. Price: 22.5
+
+Back Rows
+C. Stander: 37.35
+J. Tipuric: 48.92
+T. Faletau: 48.11
+
+Second Rows
+A. Beard: 28.53
+S. Cummings: 38.2
+
+Hooker
+G. Turner: 32.18
+
+Props
+A. Porter: 14.02
+W. Jones: 35.65
+-------------------------------
+
+Captain:
+T. Thomas: 98.26
+-------------------------------
+
+Super-Sub:
+D. Penaud: 38.35
+-------------------------------
+
+Normal Subs
+D. Penaud: 38.35
+-------------------------------
+
+Players by Country
+-----------------
+
+English Players
+
+French Players
+B. Dulin: 15.5
+D. Penaud: 14.2
+G. Villiere: 12.5
+T. Thomas: 17.5
+
+Irish Players
+A. Porter: 10.2
+C. Stander: 15.9
+J. Sexton: 15.5
+R. Henshaw: 15.9
+
+Italian Players
+
+Scottish Players
+A. Price: 10.3
+C. Redpath: 11
+G. Turner: 11.9
+S. Cummings: 13.2
+
+Welsh Players
+A. Beard: 9.9
+J. Tipuric: 16.3
+T. Faletau: 16
+W. Jones: 14.2

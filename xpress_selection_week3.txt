@@ -1,0 +1,86 @@
+
+Total Points: 942.915
+-------------------------------
+
+Budget Spent: 220.7
+-------------------------------
+
+Starting Players
+-----------------
+
+Full Back
+E. Daly: 53.85
+
+Wings
+J. Lowe: 86.89
+J. Larmour: 84.71
+
+Centres
+O. Farrell: 45.63
+G. Ringrose: 68
+
+Fly Half
+P. Garbisi: 20.44
+
+Scrum_Half
+B. Youngs: 32.11
+
+Back Rows
+S. Negri: 22.21
+J. Tipuric: 29.09
+T. Faletau: 29.92
+
+Second Rows
+M. Itoje: 41.23
+A. Jones: 20.59
+
+Hooker
+L. Bigi: 15.49
+
+Props
+A. Lovotti: 5.65
+W. Jones: 22.23
+-------------------------------
+
+Captain:
+J. Lowe: 86.89
+-------------------------------
+
+Super-Sub:
+K. Earls: 39.69
+-------------------------------
+
+Normal Subs
+K. Earls: 39.69
+-------------------------------
+
+Players by Country
+-----------------
+
+English Players
+B. Youngs: 13.8
+M. Itoje: 15.6
+E. Daly: 15.9
+O. Farrell: 15.9
+
+French Players
+
+Irish Players
+J. Lowe: 14
+J. Larmour: 13.2
+G. Ringrose: 15.6
+K. Earls: 13.1
+
+Italian Players
+L. Bigi: 10.3
+A. Lovotti: 7.2
+S. Negri: 12
+P. Garbisi: 11.8
+
+Scottish Players
+
+Welsh Players
+W. Jones: 15.5
+J. Tipuric: 16.2
+T. Faletau: 16.5
+A. Jones: 14.1

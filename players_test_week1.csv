@@ -1,0 +1,139 @@
+player,country,position,cost,started,week,overall_score
+A. Beard,Wales,Second Row,9.9,1,1,24.86
+A. Dupont,France,Scrum Half,17.8,1,1,91.02
+A. Jelonch,France,Back Row,10.6,0,1,17.65
+A. Jones,Wales,Second Row,13.8,1,1,46.6
+A. Porter,Ireland,Prop,10.2,1,1,18.24
+A. Price,Scotland,Scrum Half,10.3,1,1,22.58
+A. Vincent,France,Centre,16.3,1,1,108.0
+A. Watson,England,Wing,13.3,1,1,9.69
+B. Burns,Ireland,Fly Half,9.0,0,1,20.12
+B. Dulin,France,Full Back,15.5,1,1,94.6
+B. Earl,England,Back Row,10.2,0,1,6.26
+B. Obano,England,Prop,8.2,0,1,4.13
+B. Serin,France,Scrum Half,13.4,0,1,15.98
+B. Vunipola,England,Back Row,13.4,1,1,6.93
+B. Youngs,England,Scrum Half,13.7,1,1,11.47
+B. le Roux,France,Second Row,14.2,1,1,56.2
+C. Baille,France,Prop,13.3,1,1,39.1
+C. Canna,Italy,Fly Half,9.7,0,1,2.86
+C. Harris,Scotland,Centre,15.5,1,1,39.2
+C. Healy,Ireland,Prop,12.6,1,1,7.62
+C. Lawes,England,Second Row,13.9,0,1,6.18
+C. Murray,Ireland,Scrum Half,12.2,1,1,8.35
+C. Ollivon,France,Back Row,15.1,1,1,52.4
+C. Redpath,Scotland,Centre,11.0,1,1,45.1
+C. Sheedy,Wales,Fly Half,8.2,0,1,5.54
+C. Stander,Ireland,Back Row,15.9,1,1,39.7
+D. Aldegheri,France,Prop,7.6,0,1,14.3
+D. Biggar,Wales,Fly Half,15.3,1,1,32.6
+D. Cherry,Scotland,Hooker,8.6,0,1,11.53
+D. Cretin,France,Back Row,11.5,1,1,76.7
+D. Fischetti,Italy,Prop,5.6,0,1,-7.24
+D. Kilcoyne,Ireland,Prop,10.1,0,1,9.68
+D. Lydiate,Wales,Back Row,11.3,1,1,9.17
+D. Penaud,France,Wing,14.2,0,1,12.98
+D. Rimpelli,Italy,Prop,5.8,0,1,-1.56
+D. Robson,England,Scrum Half,8.9,0,1,0.53
+D. Sisi,Italy,Second Row,7.6,1,1,-3.41
+D. van der Merwe,Scotland,Wing,15.4,1,1,60.2
+E. Daly,England,Full Back,15.2,1,1,31.0
+E. Dee,Wales,Hooker,9.8,0,1,1.78
+E. Genge,England,Prop,11.0,1,1,17.77
+F. Russell,Scotland,Fly Half,16.2,1,1,42.34
+F. Ruzza,Italy,Second Row,6.9,0,1,0.31
+G. Alldritt,France,Back Row,16.6,1,1,51.55
+G. Davies,Wales,Scrum Half,12.1,0,1,12.95
+G. Fickou,France,Centre,15.4,1,1,54.42
+G. Ford,England,Fly Half,13.8,0,1,-0.21
+G. Graham,Scotland,Back Row,10.5,0,1,14.36
+G. Lucchesi,Italy,Hooker,5.8,0,1,-1.99
+G. North,Wales,Wing,17.0,1,1,75.0
+G. Palazzani,Italy,Scrum Half,7.1,0,1,2.71
+G. Ringrose,Ireland,Centre,15.9,1,1,48.4
+G. Turner,Scotland,Hooker,11.9,1,1,34.07
+G. Villiere,France,Wing,12.5,1,1,72.6
+G. Zilocchi,Italy,Prop,6.7,0,1,-2.44
+H. Amos,Wales,Full Back,10.3,1,1,22.16
+H. Jones,Scotland,Centre,10.1,0,1,3.31
+H. Keenan,Ireland,Full Back,13.5,1,1,50.1
+H. Slade,England,Centre,14.7,1,1,19.6
+H. Watson,Scotland,Back Row,16.4,1,1,56.1
+H. Williams,England,Prop,9.2,0,1,5.66
+I. Henderson,Ireland,Second Row,12.7,0,1,12.95
+J. Brex,Italy,Centre,8.2,1,1,32.3
+J. George,England,Hooker,13.5,1,1,8.37
+J. Gibson-Park,Ireland,Scrum Half,9.1,0,1,3.65
+J. Gray,Scotland,Second Row,14.0,1,1,50.1
+J. Gros,France,Prop,9.9,0,1,18.5
+J. Hill,England,Second Row,12.1,1,1,21.0
+J. Larmour,Ireland,Wing,13.1,0,1,9.31
+J. Lowe,Ireland,Wing,14.0,1,1,52.0
+J. Marchand,France,Hooker,12.0,1,1,31.88
+J. May,England,Wing,14.1,1,1,10.0
+J. Meyer,Italy,Back Row,6.2,1,1,10.52
+J. Navidi,Wales,Back Row,13.8,0,1,42.32
+J. Ritchie,Scotland,Back Row,15.2,1,1,26.56
+J. Ryan,Ireland,Second Row,14.3,1,1,14.65
+J. Sexton,Ireland,Fly Half,15.5,1,1,28.53
+J. Tipuric,Wales,Back Row,16.3,1,1,52.2
+J. Trulla,Italy,Full Back,8.1,1,1,13.8
+J. Williams,Wales,Centre,11.6,1,1,17.25
+J. van der Flier,Ireland,Back Row,12.6,1,1,26.08
+J. van der Walt,Scotland,Fly Half,9.6,0,1,2.46
+K. Earls,Ireland,Wing,12.8,1,1,15.59
+K. Owens,Wales,Hooker,12.4,1,1,48.5
+L. Bigi,Italy,Hooker,10.5,1,1,1.59
+L. Brown,Wales,Prop,8.5,0,1,10.54
+L. Carbonel,France,Fly Half,10.2,0,1,22.88
+L. Cowan-Dickie,England,Hooker,12.0,0,1,7.03
+L. Halfpenny,Wales,Full Back,13.8,1,1,45.8
+L. Rees-Zammit,Wales,Wing,13.3,1,1,46.8
+L. Sperandio,Italy,Wing,9.2,1,1,14.6
+M. Fagerson,Scotland,Back Row,13.8,1,1,41.34
+M. Haouas,France,Prop,11.3,1,1,39.8
+M. Ioane,Italy,Wing,11.8,1,1,35.8
+M. Itoje,England,Second Row,14.7,1,1,20.0
+M. Jalibert,France,Fly Half,15.1,1,1,70.72
+M. Lamaro,Italy,Back Row,7.0,1,1,11.1
+M. Lazzaroni,Italy,Second Row,5.5,1,1,-4.2
+M. Malins,England,Fly Half,9.0,0,1,-0.09
+M. Mbanda,Italy,Back Row,8.9,0,1,-0.04
+M. Riccioni,Italy,Prop,5.9,1,1,2.24
+M. Wilson,England,Back Row,12.3,1,1,19.12
+M. Zanon,Italy,Centre,6.8,1,1,-1.45
+N. Cannone,Italy,Second Row,7.9,0,1,-1.19
+N. Tompkins,Wales,Centre,15.6,0,1,31.95
+O. Farrell,England,Centre,14.9,1,1,22.9
+O. Kebble,Scotland,Prop,9.3,0,1,6.86
+O. Lawrence,England,Centre,8.8,1,1,4.31
+P. Bourgarit,France,Hooker,8.4,0,1,27.92
+P. Garbisi,Italy,Fly Half,11.8,1,1,35.29
+P. O'Mahony,Ireland,Back Row,12.5,1,1,-5.91
+P. Willemse,France,Second Row,15.1,1,1,46.75
+R. Gray,Scotland,Second Row,12.3,0,1,10.14
+R. Henshaw,Ireland,Centre,15.9,1,1,44.14
+R. Herring,Ireland,Hooker,9.9,1,1,16.65
+R. Jones,Wales,Prop,8.6,0,1,12.54
+R. Kelleher,Ireland,Hooker,10.6,0,1,13.55
+R. Sutherland,Scotland,Prop,12.7,1,1,29.54
+R. Taofifenua,France,Second Row,11.5,0,1,16.25
+S. Cummings,Scotland,Second Row,13.2,1,1,31.5
+S. Hogg,Scotland,Full Back,17.3,1,1,85.1
+S. Maitland,Scotland,Wing,13.0,1,1,37.39
+S. Negri,Italy,Back Row,11.8,1,1,8.79
+S. Steele,Scotland,Scrum Half,7.1,0,1,3.82
+S. Varney,Italy,Scrum Half,6.6,1,1,-1.6
+T. Beirne,Ireland,Second Row,12.6,1,1,52.0
+T. Curry,England,Back Row,15.2,1,1,31.5
+T. Faletau,Wales,Back Row,16.0,1,1,50.6
+T. Francis,Wales,Prop,10.7,1,1,30.96
+T. Furlong,Ireland,Prop,14.3,0,1,16.96
+T. Thomas,France,Wing,17.5,1,1,112.5
+T. Williams,Wales,Scrum Half,11.8,1,1,26.25
+W. Connors,Ireland,Back Row,10.2,0,1,9.42
+W. Jones,Wales,Prop,14.2,1,1,51.86
+W. Nel,Scotland,Prop,11.2,0,1,8.96
+W. Rowlands,Wales,Second Row,11.4,0,1,10.54
+W. Stuart,England,Prop,10.1,1,1,17.44
+Z. Fagerson,Scotland,Prop,12.5,1,1,25.94

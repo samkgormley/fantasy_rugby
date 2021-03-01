@@ -1,0 +1,377 @@
+model 'Fantasy Rugby'
+  uses "mmxprs", "mmsheet"
+
+  ! ============================================================================
+! Set Parameters and Datafile
+! ============================================================================
+
+  week := 3
+  
+  if(week = 1) then
+    budget_available := 220.0
+    number_of_players := 138
+    input := "mmsheet.csv:players_pred_week1.csv"
+    output := "xpress_selection_week1.txt"
+  elif (week = 2) then
+    budget_available := 226.0
+    number_of_players := 138
+    input := "mmsheet.csv:players_pred_week2.csv"
+    output := "xpress_selection_week2.txt"
+  elif (week = 3) then
+    budget_available := 249.6
+    number_of_players := 92
+    input := "mmsheet.csv:players_pred_week3.csv"
+    output := "xpress_selection_week3.txt"
+  end-if
+
+! ============================================================================
+! Read in Data
+! ============================================================================
+
+  ! Fixed Data
+  declarations
+    Players = 1..number_of_players
+    player_names: array(Players) of string
+    points: array(Players) of real
+    cost: array(Players) of real
+    started: array(Players) of integer
+
+    England: array(Players) of integer
+    France: array(Players) of integer
+    Ireland: array(Players) of integer
+    Italy: array(Players) of integer
+    Scotland: array(Players) of integer
+    Wales: array(Players) of integer
+
+    Prop: array(Players) of integer
+    Hooker: array(Players) of integer
+    Second_Row: array(Players) of integer
+    Back_Row: array(Players) of integer
+    Scrum_Half: array(Players) of integer
+    Fly_Half: array(Players) of integer
+    Centre: array(Players) of integer
+    Wing: array(Players) of integer
+    Full_Back: array(Players) of integer
+
+  end-declarations
+
+  initialisations from input
+    [player_names,
+    cost,
+    started,
+    points,
+    England,
+    France,
+    Ireland,
+    Italy,
+    Scotland,
+    Wales,
+    Back_Row,
+    Centre,
+    Fly_Half,
+    Full_Back,
+    Hooker,
+    Prop,
+    Scrum_Half,
+    Second_Row,
+    Wing] as "[A2:T139]"
+  end-initialisations
+
+
+  ! Decision Variables
+  declarations
+    ! Starting Players
+    x: array(Players) of mpvar
+    ! Captain
+    y: array(Players) of mpvar
+    ! Subs
+    w: array(Players) of mpvar
+    ! Super-Sub
+    z: array(Players) of mpvar
+
+  end-declarations
+
+
+! ============================================================================
+! Modelling
+! ============================================================================
+
+  ! ----------------------------------------------------------------------------
+  ! Objective Function
+  ! ----------------------------------------------------------------------------
+
+  total_points :=
+    sum(i in Players) (points(i) * x(i)) +
+    sum(i in Players) (points(i) * y(i)) +
+    sum(i in Players) (points(i) * 0.5 * w(i)) +
+    sum(i in Players) (points(i) * (1 - started(i)) * 6 * z(i)) +
+    20
+
+  ! ----------------------------------------------------------------------------
+  ! Model Constraints
+  ! ----------------------------------------------------------------------------
+
+  ! 1. No more than 15 normal players can be picked
+  sum(i in Players) x(i) <= 15
+
+  ! 2. Only 1 player can be picked as captain
+  sum(i in Players) y(i) <= 1
+
+  ! 3. No more than 3 subs can be picked
+  sum(i in Players) w(i) <= 3
+  ! sum(i in Players) w(i) >= 3
+
+  ! 4. Only 1 player can be picked as super-sub
+  sum(i in Players) z(i) <= 1
+
+
+  ! 5. The captain must be a starting player
+  forall(i in Players) y(i) <= x(i)
+
+  ! 6. The super-sub must be a sub
+  forall(i in Players) z(i) <= w(i)
+
+  ! 7. No subs can be starting players
+  forall(i in Players) w(i) <= 1 - x(i)
+
+
+  ! 8. No more than 4 players can be picked from any 1 country
+  sum(i in Players) (x(i) + w(i)) * England(i) <= 4
+  sum(i in Players) (x(i) + w(i)) * France(i) <= 4
+  sum(i in Players) (x(i) + w(i)) * Ireland(i) <= 4
+  sum(i in Players) (x(i) + w(i)) * Italy(i) <= 4
+  sum(i in Players) (x(i) + w(i)) * Scotland(i) <= 4
+  sum(i in Players) (x(i) + w(i)) * Wales(i) <= 4
+
+  ! 9. There is a max player cap on each individual position
+  sum(i in Players) (x(i) + w(i)) * Prop(i) <= 4
+  sum(i in Players) (x(i) + w(i)) * Hooker(i) <= 2
+  sum(i in Players) (x(i) + w(i)) * Second_Row(i) <= 4
+  sum(i in Players) (x(i) + w(i)) * Back_Row(i) <= 6
+  sum(i in Players) (x(i) + w(i)) * Scrum_Half(i) <= 2
+  sum(i in Players) (x(i) + w(i)) * Fly_Half(i) <= 2
+  sum(i in Players) (x(i) + w(i)) * Centre(i) <= 4
+  sum(i in Players) (x(i) + w(i)) * Wing(i) <= 4
+  sum(i in Players) (x(i) + w(i)) * Full_Back(i) <= 2
+
+  ! 10. There must be the appropriate number of players per position on the starting team
+  sum(i in Players) x(i) * Prop(i) >= 2
+  sum(i in Players) x(i) * Hooker(i) >= 1
+  sum(i in Players) x(i) * Second_Row(i) >= 2
+  sum(i in Players) x(i) * Back_Row(i) >= 3
+  sum(i in Players) x(i) * Scrum_Half(i) >= 1
+  sum(i in Players) x(i) * Fly_Half(i) >= 1
+  sum(i in Players) x(i) * Centre(i) >= 2
+  sum(i in Players) x(i) * Wing(i) >= 2
+  sum(i in Players) x(i) * Full_Back(i) >= 1
+
+  ! 11. The total price of players picked cannot exceed the budget available
+  sum(i in Players) (x(i) * cost(i) + w(i) * cost(i)) <= budget_available
+
+  ! 12. The x and w variables are binary
+  forall(i in Players) x(i) is_binary
+  forall(i in Players) w(i) is_binary
+
+  ! ----------------------------------------------------------------------------
+  ! Optimize
+  ! ----------------------------------------------------------------------------
+
+  maximise(total_points)
+
+! ============================================================================
+! Print/Save the results
+! ============================================================================
+
+  procedure print_solution
+
+    fopen((output), F_OUTPUT)
+
+    writeln
+
+    writeln("Total Points: ", getobjval)
+    writeln("-------------------------------")
+    writeln
+
+    writeln("Budget Spent: ", sum(i in Players) (getsol(x(i)) * cost(i) + getsol(w(i)) * cost(i)))
+    writeln("-------------------------------")
+    writeln
+
+    writeln("Starting Players")
+    writeln("-----------------")
+    writeln
+
+    writeln("Full Back")
+    forall(i in Players) do
+      if( getsol(x(i)) >= 1 and Full_Back(i) >= 1) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Wings")
+    forall(i in Players) do
+      if( getsol(x(i)) >= 1 and Wing(i) >= 1) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Centres")
+    forall(i in Players) do
+      if( getsol(x(i)) >= 1 and Centre(i) >= 1) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Fly Half")
+    forall(i in Players) do
+      if( getsol(x(i)) >= 1 and Fly_Half(i) >= 1) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Scrum_Half")
+    forall(i in Players) do
+      if( getsol(x(i)) >= 1 and Scrum_Half(i) >= 1) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Back Rows")
+    forall(i in Players) do
+      if( getsol(x(i)) >= 1 and Back_Row(i) >= 1) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Second Rows")
+    forall(i in Players) do
+      if( getsol(x(i)) >= 1 and Second_Row(i) >= 1) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Hooker")
+    forall(i in Players) do
+      if( getsol(x(i)) >= 1 and Hooker(i) >= 1) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Props")
+    forall(i in Players) do
+      if( getsol(x(i)) >= 1 and Prop(i) >= 1) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+    writeln("-------------------------------")
+    writeln
+
+    writeln("Captain:")
+    forall(i in Players) do
+      if( getsol(y(i)) >= 1 ) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+    writeln("-------------------------------")
+    writeln
+
+    writeln("Super-Sub:")
+    forall(i in Players) do
+      if( getsol(z(i)) >= 1 ) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+    writeln("-------------------------------")
+    writeln
+
+    writeln("Normal Subs")
+    forall(i in Players) do
+      if( getsol(w(i)) >= 1 ) then
+        writeln(player_names(i),': ',points(i))
+      end-if
+    end-do
+    writeln("-------------------------------")
+    writeln
+
+    writeln("Players by Country")
+    writeln("-----------------")
+    writeln
+
+    writeln("English Players")
+    forall(i in Players) do
+      if( getsol((x(i) + w(i))) >= 1 and England(i) >= 1) then
+        writeln(player_names(i),": ",cost(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("French Players")
+    forall(i in Players) do
+      if( getsol((x(i) + w(i))) >= 1 and France(i) >= 1) then
+        writeln(player_names(i),": ",cost(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Irish Players")
+    forall(i in Players) do
+      if( getsol((x(i) + w(i))) >= 1 and Ireland(i) >= 1) then
+        writeln(player_names(i),": ",cost(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Italian Players")
+    forall(i in Players) do
+      if( getsol((x(i) + w(i))) >= 1 and Italy(i) >= 1) then
+        writeln(player_names(i),": ",cost(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Scottish Players")
+    forall(i in Players) do
+      if( getsol((x(i) + w(i))) >= 1 and Scotland(i) >= 1) then
+        writeln(player_names(i),": ",cost(i))
+      end-if
+    end-do
+
+    writeln
+
+    writeln("Welsh Players")
+    forall(i in Players) do
+      if( getsol((x(i) + w(i))) >= 1 and Wales(i) >= 1) then
+        writeln(player_names(i),": ",cost(i))
+      end-if
+    end-do
+
+    fclose(F_OUTPUT)
+
+  end-procedure
+
+  print_solution
+
+! ============================================================================
+! End model
+! ============================================================================
+
+end-model
